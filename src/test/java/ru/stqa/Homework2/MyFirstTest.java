@@ -33,5 +33,4 @@ public class MyFirstTest{
     static void stop() {
         driver.quit();
     }
-
 }

@@ -34,6 +34,7 @@ public class LiteCartLoginTest{
         driver.findElement(By.xpath("//a[@title='Logout']")).click();
         webDriverWait.until(ExpectedConditions.visibilityOf(driver.findElement(By.name("login"))));
     }
+
     @AfterAll
     static void stop() {
         driver.quit();
