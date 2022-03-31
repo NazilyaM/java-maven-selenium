@@ -21,7 +21,6 @@ public class MyFirstTest{
         driver = new ChromeDriver();
         webDriverWait = new WebDriverWait(driver, 10);
     }
-
     @Test
     void myFirstTest() {
         driver.get("https://www.google.com/");
