@@ -42,7 +42,7 @@ public class LiteCartUsersPageTest {
             List<WebElement> stickers = ducks.get(i).findElements(By.xpath(".//div[starts-with(@class,'sticker')]"));
             for (int j = 0; j < stickers.size(); j++) {
                 String stickersName = stickers.get(j).getText();
-                System.out.println("У "+ i+"-й" +" уточки " + "всего " + stickers.size() + " стикер(ов). Стикер " + stickersName);
+                System.out.println("У "+ i+"-й уточки всего " + stickers.size() + " стикер(ов). Стикер " + stickersName);
             }
             Assertions.assertEquals(1, stickers.size());
             stickersCount = stickersCount + stickers.size();
