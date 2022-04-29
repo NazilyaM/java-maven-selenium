@@ -11,6 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -35,6 +38,7 @@ public class BaseTest {
         }
  */
     }
+
     public boolean areElementsPresent(By locator) {
         return webDriver.findElements(locator).size() > 0;
     }
@@ -48,16 +52,21 @@ public class BaseTest {
     void setupBrowser() {
         webDriver = new EventFiringWebDriver(new ChromeDriver());
         webDriverWait = new WebDriverWait(webDriver, 10);
-        webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        webDriver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
+
     @AfterEach
     void tearDown() {
         webDriver.quit();
     }
+
     public void login() {
         webDriver.findElement(By.name("username")).sendKeys("admin");
         webDriver.findElement(By.name("password")).sendKeys("admin");
         webDriver.findElement(By.name("login")).click();
     }
 
+    public void sortArray(List arrayForSort) {
+        Collections.sort(new ArrayList());
+    }
 }
